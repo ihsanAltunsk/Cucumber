@@ -1,9 +1,10 @@
 Feature: US1009 User performs multiple searches
+  @wip
   Scenario Outline: TC15 The user should be able to search for elements in a list.
     Given User goes to the "toUrl" homepage.
-    Then Enters "<searchKeywords>" into the search box and presses ENTER.
-    And Tests that products can be found in the search results.
-    Then Waits for 1 second.
+    Then Types "<searchKeywords>" in the search box and presses ENTER.
+    And Tests that a product can be found in the search results.
+    Then Waits for 1 seconds.
     And Closes the page.
 
 Examples:
