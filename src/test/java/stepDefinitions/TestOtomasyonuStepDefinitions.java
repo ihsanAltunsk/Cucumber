@@ -68,14 +68,14 @@ public class TestOtomasyonuStepDefinitions {
     }
     @Then("Clicks on the account button.")
     public void clicks_on_the_account_button() {
-       testOtomasyonuPage.accountLink.click();
+        testOtomasyonuPage.accountLink.click();
     }
-    @Then("Enters the valid email as {string}")
-    public void enters_the_valid_email_as(String email) {
+    @And("Enters the email as {string}")
+    public void entersTheEmailAs(String email) {
         testOtomasyonuPage.emailBox.sendKeys(ConfigReader.getProperty(email));
     }
-    @Then("Enters the valid password as {string}")
-    public void enters_the_valid_password_as(String password) {
+    @And("Enters the password as {string}")
+    public void entersThePasswordAs(String password) {
         testOtomasyonuPage.passwordBox.sendKeys(ConfigReader.getProperty(password));
     }
     @Then("Clicks on the signIn button.")
@@ -90,4 +90,5 @@ public class TestOtomasyonuStepDefinitions {
     public void testsThatTheUserCannotLogIntoTheSystem() {
         Assert.assertTrue(testOtomasyonuPage.emailBox.isDisplayed());
     }
+
 }
