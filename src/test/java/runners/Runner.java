@@ -8,8 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
     features = "src/test/resources1/features", //Where are the Feature/Scenario(s) to be executed?
     glue = "stepDefinitions", // Where are the codes for the Feature/Scenario(s) to be executed?
-    tags = "@smoke"//Which Feature/Scenario(s) will be executed?
-
+    tags = "@wip", //Which Feature/Scenario(s) will be executed?
+    dryRun = false //Setting it to true provides the incomplete steps without running the test.
+                   //dryRun must be false when running the tests.
 )
 
 public class Runner {}

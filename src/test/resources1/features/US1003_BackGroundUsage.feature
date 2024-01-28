@@ -2,7 +2,8 @@ Feature: US1003 The common steps at the beginning should be typed by the user on
 
   Background: Common initial steps can be written here.
     Given User goes to the "toUrl" homepage.
-  @smoke
+
+    @wip
   Scenario: TC06 User should not find any results when searching for java.
 
     Then Types "java" in the search box and presses ENTER.
