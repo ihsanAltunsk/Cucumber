@@ -96,4 +96,9 @@ public class TestOtomasyonuStepDefinitions {
     public void tests_that_successful_login_is_possible() {
         Assert.assertTrue(testOtomasyonuPage.logoutLink.isDisplayed());
     }
+
+    @And("Tests that the user cannot log into the system.")
+    public void testsThatTheUserCannotLogIntoTheSystem() {
+        Assert.assertTrue(testOtomasyonuPage.emailBox.isDisplayed());
+    }
 }
