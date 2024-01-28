@@ -1,6 +1,5 @@
 Feature: US1006 Facebook Registration Test with Faker Class
 
-  @wip
   Scenario: TC12 Facebook registration should be possible with fake information.
     Given User goes to the "facebookUrl" homepage.
     And   Clicks on the Create New Account button on Facebook.
