@@ -8,8 +8,7 @@ import utilities.Driver;
 import java.util.List;
 
 public class TestOtomasyonuPage {
-    public TestOtomasyonuPage(){
-        PageFactory.initElements(Driver.getDriver(),this);}
+    public TestOtomasyonuPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
     @FindBy(id = "global-search")
     public WebElement searchBox;
