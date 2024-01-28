@@ -1,6 +1,6 @@
 Feature: 1010 The user cannot log in with invalid information.
 
-  Scenario Outline: TC16 Login should not be possible with inVALİD user information provided as a list.
+  Scenario Outline: TC16 Login should not be possible with invalid user information provided as a list.
     Given User goes to the "toUrl" homepage.
     Then  Clicks on the account button.
     When  Enters the email as "<givenEmail>"
