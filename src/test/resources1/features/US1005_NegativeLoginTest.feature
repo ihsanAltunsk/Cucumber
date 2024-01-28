@@ -1,4 +1,3 @@
-@wip
 Feature: 1005 The user cannot log in with invalid information.
 
   Scenario: TC09 The user should not be able to log in with a valid email and an invalid password.
