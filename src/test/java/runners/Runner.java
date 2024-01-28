@@ -6,6 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+    plugin = {"html:target/html-reports/rapor.html",
+            "json:target/json-reports/cucumber.json",
+            "junit:target/xml-reports/cucumber.xml"},
     features = "src/test/resources1/features", //Where are the Feature/Scenario(s) to be executed?
     glue = "stepDefinitions", // Where are the codes for the Feature/Scenario(s) to be executed?
     tags = "@wip", //Which Feature/Scenario(s) will be executed?
