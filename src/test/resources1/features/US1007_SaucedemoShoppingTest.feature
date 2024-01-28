@@ -1,6 +1,6 @@
 Feature: US1007 Test for Products Added to the Shopping Cart by the User
 
-  Scenario: TC13: A product should be successfully added to the shopping cart.
+  Scenario: TC13 A product should be successfully added to the shopping cart.
     Given User goes to the "sauceUrl" homepage.
     And   Waits for 1 seconds.
     Then  Enters "standard_user" into the saucedemo username box.

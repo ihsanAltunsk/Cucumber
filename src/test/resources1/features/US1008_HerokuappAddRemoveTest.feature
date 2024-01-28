@@ -1,6 +1,6 @@
 Feature: US1008 User tests the buttons on the page
 
-  Scenario: TC14: The user tests that the Add and Delete buttons are functional.
+  Scenario: TC14 The user tests that the Add and Delete buttons are functional.
     Given User goes to the "heroUrl" homepage.
     When  Clicks on the Add Element button.
     And   Waits for 1 seconds.
