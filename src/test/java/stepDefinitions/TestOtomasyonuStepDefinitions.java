@@ -76,4 +76,24 @@ public class TestOtomasyonuStepDefinitions {
     public void userGoesToTheHomepage(String destination) {
         Driver.getDriver().get(ConfigReader.getProperty(destination));
     }
+    @Then("Clicks on the account button.")
+    public void clicks_on_the_account_button() {
+       testOtomasyonuPage.accountLink.click();
+    }
+    @Then("Enters the valid email as {string}")
+    public void enters_the_valid_email_as(String email) {
+        testOtomasyonuPage.emailBox.sendKeys(ConfigReader.getProperty(email));
+    }
+    @Then("Enters the valid password as {string}")
+    public void enters_the_valid_password_as(String password) {
+        testOtomasyonuPage.passwordBox.sendKeys(ConfigReader.getProperty(password));
+    }
+    @Then("Clicks on the signIn button.")
+    public void clicks_on_the_sign_in_button() {
+        testOtomasyonuPage.loginButton.click();
+    }
+    @Then("Tests that successful login is possible.")
+    public void tests_that_successful_login_is_possible() {
+        Assert.assertTrue(testOtomasyonuPage.logoutLink.isDisplayed());
+    }
 }
