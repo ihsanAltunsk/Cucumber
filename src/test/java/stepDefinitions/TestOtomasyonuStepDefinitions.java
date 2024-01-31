@@ -101,4 +101,13 @@ public class TestOtomasyonuStepDefinitions {
     public void entersGivenInTheListAsThePassword(String password) {
         testOtomasyonuPage.passwordBox.sendKeys(password);
     }
+
+    @Then("The test script finds the stock quantity of the product in the row {string} in the Excel sheet.")
+    public void theTestScriptFindsTheStockQuantityOfTheProductInTheRowInTheExcelSheet(String rowNo) {
+
+    }
+
+    @And("Tests that the stock quantity is greater than the stock quantity given in the row {string}.")
+    public void testsThatTheStockQuantityIsGreaterThanTheStockQuantityGivenInTheRow(String rowNo) {
+    }
 }
