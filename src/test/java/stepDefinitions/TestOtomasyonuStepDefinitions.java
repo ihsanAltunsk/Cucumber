@@ -123,9 +123,23 @@ public class TestOtomasyonuStepDefinitions {
         String productNameAtRow = sayfa1.getRow(Integer.parseInt(rowNo)).getCell(0).toString();
 
         testOtomasyonuPage.searchBox.sendKeys(productNameAtRow + Keys.ENTER);
+        productStockCount = testOtomasyonuPage.foundProductsElementsList.size();
     }
 
     @And("Tests that the stock quantity is greater than the stock quantity given in the row {string}.")
     public void testsThatTheStockQuantityIsGreaterThanTheStockQuantityGivenInTheRow(String rowNo) {
+        String path = "src/test/resources1/cucumb.xlsx";
+        Workbook workbook;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(path);
+            workbook = new XSSFWorkbook(fileInputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        sayfa1 = workbook.getSheet("Sayfa1");
+        String minStockCountStr = sayfa1.getRow(Integer.parseInt(rowNo)-1).getCell(1).toString();
+        int minStockCount = (int) Double.parseDouble(minStockCountStr);
+
+        Assert.assertTrue(productStockCount >= minStockCount);
     }
 }
